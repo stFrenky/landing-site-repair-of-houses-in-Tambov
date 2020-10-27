@@ -1,0 +1,120 @@
+.contacts {
+  @media (min-width: 768px) {
+    background-position: 75% 150px;
+  }
+
+  @media (min-width: 1024px) {
+    background-position: center top;
+  }
+
+
+  background: url("../img/map.jpg") 65% 150px $black no-repeat;
+  background-size: cover;
+
+  .contacts__wrap {
+    @media (min-width: 560px) {
+      padding-bottom: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      padding-bottom: 10px;
+    }
+
+      padding-top: 100px;
+    padding-bottom: 170%;
+
+    .contacts__title {
+      @media (min-width: 1024px) {
+        max-width: 455px;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+        font-size: px-to-rem(32px);
+      line-height: px-to-rem(37px);
+      text-align: center;
+      color: $primary;
+      margin: 0 0 20px 0;
+      font-weight: 700;
+    }
+    .contacts__info {
+      @media (min-width: 1024px) {
+        max-width: 358px;
+        margin-top: 30px;
+      }
+
+        background-color: $white;
+      box-sizing: border-box;
+      padding: 24px;
+      border-radius: 5px;
+
+      .contacts__phone, .contacts__mail, .contacts__address {
+        margin: 0 0 20px 0;
+        span {
+          display: block;
+          font-size: px-to-rem(14px);
+          line-height: px-to-rem(16px);
+          font-weight: 700;
+          padding-left: 30px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $black;
+          font-size: px-to-rem(17px);
+          line-height: px-to-rem(24px);
+          display: inline-block;
+          margin-top: 10px;
+          margin-left: 30px;
+          transition-duration: 500ms;
+          transition-property: color;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      .contacts__phone {
+        background: url("../img/tel.svg") left top no-repeat;
+      }
+
+      .contacts__mail {
+        background: url("../img/mail.svg") left top no-repeat;
+      }
+      .contacts__address {
+        background: url("../img/map.svg") left top no-repeat;
+
+        span {
+          line-height: px-to-rem(24px);
+
+          &:last-child {
+            font-size: px-to-rem(17px);
+            line-height: px-to-rem(24px);
+            font-weight: 400;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .contacts__shema {
+        font-size: px-to-rem(17px);
+        line-height: px-to-rem(24px);
+        margin-bottom: 0;
+        margin-left: 30px;
+
+        span {
+          display: block;
+        }
+
+        a {
+          text-decoration: none;
+          color: $primary;
+        }
+      }
+    }
+
+
+  }
+}

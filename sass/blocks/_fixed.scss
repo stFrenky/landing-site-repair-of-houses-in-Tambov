@@ -1,0 +1,142 @@
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: $white;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, .8);
+  width: 100%;
+
+  .fixed__wrap {
+    display: flex;
+    align-items: center;
+
+    .fixed__hamburger {
+      @media (min-width: 480px) {
+        margin-right: 7%;
+      }
+
+      @media (min-width: 1024px) {
+        position: relative;
+
+        &::after {
+          content: "Меню";
+          font-size: px-to-rem(14px);
+          line-height: px-to-rem(16px);
+          position: absolute;
+          right: -45px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      flex-basis: 24px;
+      flex-shrink: 0;
+      cursor: pointer;
+      margin-right: 3%;
+
+      span {
+        display: block;
+        background-color: $primary;
+        height: 2px;
+        border-radius: 4px;
+        width: 100%;
+        margin-bottom: 4px;
+
+        &:nth-child(3) {
+          margin-bottom: 0;
+          width: 75%;
+          margin-left: auto;
+        }
+
+      }
+    }
+
+    .fixed__repair {
+      @media (min-width: 480px) {
+        margin-right: 5%;
+        padding-left: 48px;
+      }
+
+      background: url("../img/repair.svg") left center no-repeat;
+      padding: 24px 0 24px 60px;
+
+      p {
+        margin: 0;
+        font-size: px-to-rem(18px);
+        line-height: px-to-rem(21px);
+
+        span {
+          display: block;
+          font-size: px-to-rem(14px);
+          line-height: px-to-rem(16px);
+        }
+      }
+    }
+
+    .fixed__map {
+      @media (min-width: 480px) {
+        display: block;
+      }
+
+      padding: 24px 0 24px 48px;
+      display: none;
+      background: url("../img/map.png") left center no-repeat;
+      margin-left: 31px;
+    }
+
+    .fixed__phone {
+      margin-left: auto;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: $white;
+
+        img {
+
+          @media (min-width: 680px) {
+            display: none;
+          }
+          display: block;
+        }
+
+        span {
+
+          @media (min-width: 680px) {
+            display: block;
+          }
+
+          display: none;
+          font-size: px-to-rem(24px);
+          line-height: px-to-rem(28px);
+        }
+      }
+    }
+
+    .fixed__btn {
+      @media (min-width: 880px) {
+        display: block;
+      }
+
+      @include btn {
+        display: none;
+        margin-left: 24px;
+        max-width: 164px;
+      }
+    }
+
+    .fixed__callback {
+      @media (min-width: 1024px) {
+        display: block;
+      }
+
+      display: none;
+      font-size: px-to-rem(14px);
+      line-height: px-to-rem(16px);
+      margin-left: 24px;
+    }
+  }
+}
